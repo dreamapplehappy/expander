@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+	<meta charset="UTF-8">
+	<title>Expander</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<style>
+		.title{
+			background-color: #000;
+			color: #FFF;
+			cursor: pointer;
+			height: 36px;
+			text-align: center;
+			font-size: 30px;
+			line-height: 36px;
+			margin-top: 6px;
+		}
+		.text{
+			background-color: #F00;
+			color: #000;
+			height: 36px;
+			text-align: left;
+			font-size: 30px;
+			line-height: 36px;
+		}
+	</style>
+	<script src="angular.min.js"></script>
+	<script src="expander.js"></script>
+</head>
+<body ng-controller="myController">
+	<div class="container">
+		<expander-container>
+			<expander  ng-repeat="expander in expanders"  expander-title="expander.title">{{expander.text}}</expander>
+		</expander-container>
+	</div>
+</body>
+</html>
